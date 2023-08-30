@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 
 const familySchema = new mongoose.Schema({
   name: String,
+  UserId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
   fatherName: String,
   mainAddress: String,
   currentAddress: String,
