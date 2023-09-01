@@ -3,7 +3,7 @@ const User = require("../models/UserModel.js");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const ErrorHandler = require("../utils/Errorhandler.js");
-const asyncHandler = require("../middleware/asyncHandler,.js");
+const asyncHandler = require("../middleware/asyncHandler.js");
 
 const sendEmail = require("../utils/sendEmail.js");
 const crypto = require("crypto");

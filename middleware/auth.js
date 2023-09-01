@@ -1,4 +1,4 @@
-const asyncHandler =require("./asyncHandler,.js");
+const asyncHandler =require("./asyncHandler.js");
 const ErrorHandler =require("../utils/Errorhandler.js");
 const jwt =require("jsonwebtoken");
 const User =require("../models/UserModel.js");

@@ -1,6 +1,6 @@
 const ErrorHandler = require("../utils/Errorhandler");
-const Family = require("./models/family");
-const asyncHandler = require("../middleware/asyncHandler");
+const Family = require("../models/FamilyModel.js");
+const asyncHandler = require("../middleware/asyncHandler.js");
 
 // Create a new family record
 const createFamily = asyncHandler(async (req, res, next) => {
@@ -40,6 +40,7 @@ const createFamily = asyncHandler(async (req, res, next) => {
     });
 
     res.status(201).json(newFamily);
+
   } catch (error) {
     next(new ErrorHandler("Error creating family record", 500));
   }
@@ -49,7 +50,9 @@ const createFamily = asyncHandler(async (req, res, next) => {
 const getAllFamilies = asyncHandler(async (req, res, next) => {
   try {
     const families = await Family.find();
+
     res.json(families);
+
   } catch (error) {
     next(new ErrorHandler("Error getting family records", 500));
   }

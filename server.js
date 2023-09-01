@@ -3,7 +3,7 @@ const connectDb = require("./config/db.js");
 const uncaughtExceptionHandler = require("./middleware/uncaughtExceptionHandler.js");
 const unhandledRejectionHandler = require("./middleware/unhandledRejectionHandler.js");
 const cloudinary=require('cloudinary')
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const app = require("./app.js");
 const server = app.listen(port, () => {
   console.log('server has started...',port);
