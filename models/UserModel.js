@@ -10,9 +10,9 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please enter your full name"],
     },
-    admin:{
-        type:Boolean,
-        default:false
+    admin: {
+      type: Boolean,
+      default: false,
     },
     gender: {
       type: String,
@@ -21,17 +21,17 @@ const userSchema = new mongoose.Schema(
     },
     phoneNumber: {
       type: String,
-    //   required: [true, "Please enter your phone number"],
+      //   required: [true, "Please enter your phone number"],
       unique: true,
       validate: [validator.isMobilePhone, "Please enter a valid phone number"],
     },
     permanentAddress: {
       type: String,
-    //   required: [true, "Please enter your permanent address"],
+      //   required: [true, "Please enter your permanent address"],
     },
     currentAddress: {
       type: String,
-    //   required: [true, "Please enter your current address"],
+      //   required: [true, "Please enter your current address"],
     },
     email: {
       type: String,
@@ -59,7 +59,6 @@ const userSchema = new mongoose.Schema(
     profession: String,
     resetPasswordToken: String,
     resetPasswordExpire: Date,
-   
   },
   { timestamps: true }
 );
