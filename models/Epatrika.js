@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
-const patrikaScheme = new mongoose.SchemaType({
+const patrikaSchema = new mongoose.Schema({
   pdf: String,
   Month: String,
 });
 
-const Epatrika = ("Epatrika", patrikaScheme);
+const Epatrika = mongoose.model("Epatrika", patrikaSchema);
 module.exports = Epatrika;
